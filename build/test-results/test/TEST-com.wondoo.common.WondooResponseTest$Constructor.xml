@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wondoo.common.WondooResponseTest$Constructor" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-02-03T15:10:05" hostname="MacSter.local" time="0.044">
+  <properties/>
+  <testcase name="generateWondooResponseByExceptionTest()" classname="com.wondoo.common.WondooResponseTest$Constructor" time="0.037"/>
+  <testcase name="generateWondooResponseByValueTest()" classname="com.wondoo.common.WondooResponseTest$Constructor" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
