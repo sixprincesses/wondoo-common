@@ -12,7 +12,7 @@ class WondooResponseTest {
         @Test
         void returnTrueTest() {
             /* Given */
-            WondooResponse<String> response = WondooResponse.failed(new RuntimeException());
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.failed(new RuntimeException());
 
             /* When */
             boolean condition = response.hasException();
@@ -24,7 +24,7 @@ class WondooResponseTest {
         @Test
         void returnFalseTest() {
             /* Given */
-            WondooResponse<String> response = WondooResponse.ok("wondoo");
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.ok("wondoo");
 
             /* When */
             boolean condition = response.hasException();
@@ -40,7 +40,7 @@ class WondooResponseTest {
         @Test
         void returnTrueTest() {
             /* Given */
-            WondooResponse<String> response = WondooResponse.ok("wondoo");
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.ok("wondoo");
 
             /* When */
             boolean condition = response.isSuccess();
@@ -52,7 +52,7 @@ class WondooResponseTest {
         @Test
         void returnFalseTest() {
             /* Given */
-            WondooResponse<String> response = WondooResponse.failed(new RuntimeException());
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.failed(new RuntimeException());
 
             /* When */
             boolean condition = response.isSuccess();
@@ -68,7 +68,7 @@ class WondooResponseTest {
         void getDefaultValueTest() {
             /* Given */
             String defaultValue = "wondoo";
-            WondooResponse<String> response = WondooResponse.failed(new RuntimeException());
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.failed(new RuntimeException());
 
             /* When */
             String value = response.getOfDefault(defaultValue);
@@ -86,7 +86,7 @@ class WondooResponseTest {
             String value = "wondoo";
 
             /* When */
-            WondooResponse<String> response = WondooResponse.ok(value);
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.ok(value);
 
             /* Then */
             assertEquals(response.getValue(), value);
@@ -98,7 +98,7 @@ class WondooResponseTest {
             RuntimeException exception = new RuntimeException();
 
             /* When */
-            WondooResponse<String> response = WondooResponse.failed(exception);
+            CoffeeGroundResponse<String> response = CoffeeGroundResponse.failed(exception);
 
             /* Then */
             assertEquals(response.getException(), exception);

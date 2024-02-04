@@ -1,23 +1,23 @@
 package com.wondoo.common;
 
-public class WondooResponse<T> {
+public class CoffeeGroundResponse<T> {
     private T value;
     private Exception exception;
 
-    private WondooResponse(T newValue) {
+    private CoffeeGroundResponse(T newValue) {
         value = newValue;
     }
 
-    private WondooResponse(Exception newException) {
+    private CoffeeGroundResponse(Exception newException) {
         exception = newException;
     }
 
-    public static <T> WondooResponse<T> ok(T value) {
-        return new WondooResponse<>(value);
+    public static <T> CoffeeGroundResponse<T> ok(T value) {
+        return new CoffeeGroundResponse<>(value);
     }
 
-    public static <T> WondooResponse<T> failed(Exception e) {
-        return new WondooResponse<>(e);
+    public static <T> CoffeeGroundResponse<T> failed(Exception e) {
+        return new CoffeeGroundResponse<>(e);
     }
 
     public T getOfDefault(T defaultValue) {
